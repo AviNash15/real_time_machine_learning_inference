@@ -26,7 +26,7 @@ def preprocess_string(x):
 
 def prediction(s):
     label = model_load.predict([s])
-    return str(label)
+    return str(label[0])
 
 
 @app.route('/')
@@ -42,8 +42,7 @@ def my_form_post():
         processed_text =  preprocess_string(text)
         print(processed_text)
         prediction_text = prediction(processed_text)
-        print(prediction_text[1])
-        sentiment = label_dict.get(prediction_text[1])
+        sentiment = label_dict.get(prediction_text)
         print(sentiment)
         return render_template('index.html', review=text, output=sentiment)
     else:
