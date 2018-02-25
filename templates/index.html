@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+form { 
+margin: 0 auto; 
+width:800px;
+}	
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+ input[type=submit]:hover {
+    background-color: #008CBA; /* Green */
+    color: white;
+}
+.buttonHolder
+{
+     text-align: center;
+}
+</style>
+<body>
+    <h1 align="center">Enter Movie a Review</h1>
+    <form action="/" method="POST">
+        <label for="review">Review</label>
+        <input type="text" name="text" id = "review">
+        <div class="buttonHolder">
+        <br>
+        <input type="submit" name="my-form" value="Submit">
+        </div>
+        <hr>
+        <h2>Output</h2>
+        <h2 align="center">Review:  {{review}}</h2>
+        <h2 align="center">Prediction: {{output}}</h2>
+        <hr>
+    </form>
+   
+</body>
+</html>
